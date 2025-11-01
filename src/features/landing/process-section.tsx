@@ -17,9 +17,9 @@ const processSteps: Process[] = [
       "We'll help you figure out your website goals and what problems you are looking to solve, and then craft a plan to achieve them.",
   },
   {
-    title: "03. Design & development",
+    title: "03. Design & dev",
     description:
-      "Next, we'll create designs to solve the problems we identified in the planning stage. We'll do a couple concepts so you have some options. Once you’re completely happy with the design we’ll build it.",
+      "Next, We'll do a couple concepts so you have some options. Once you’re completely happy with the design we’ll build it.",
   },
   {
     title: "04. Revision & iteration",
@@ -37,17 +37,16 @@ function ProcessItem({ step }: { step: Process }): React.ReactElement {
   const { title, description } = step;
 
   return (
-    <div className="flex w-full flex-col rounded-2xl bg-surface p-1">
+    <div className="group hover:-translate-y-1 flex w-full cursor-pointer flex-col rounded-2xl bg-surface p-1 transition-all duration-300">
       <div className="relative flex flex-col rounded-xl p-3">
         <div className="flex items-center gap-2">
-          <i className="fi fi-sc-check-circle text-foreground/60" />
           <h3 className="font-medium text-lg">{title}</h3>
         </div>
-        <p className="mt-4 pb-3 text-foreground/60 text-sm leading-relaxed">
+        <p className="mt-4 pb-3 text-foreground/60 leading-relaxed">
           {description}
         </p>
 
-        <i className="fi fi-sr-bullet absolute top-2 right-2 text-foreground/30" />
+        <i className="fi fi-sc-check-circle absolute top-2 right-2 text-foreground/30 transition-all duration-300 group-hover:text-foreground" />
       </div>
     </div>
   );
@@ -56,15 +55,13 @@ function ProcessItem({ step }: { step: Process }): React.ReactElement {
 export function ProcessSection(): React.ReactElement {
   return (
     <section className="flex flex-col items-center py-28" id="how-it-works">
-      <span className="text-foreground/40 text-sm">How it works</span>
-
-      <h2 className="mt-8 text-center font-medium text-5xl leading-tight tracking-tight">
-        Simple process
+      <h2 className="mt-8 text-center font-medium tablet:text-5xl text-4xl leading-tight tracking-tight">
+        Simple touch
         <br />
         just work
       </h2>
 
-      <div className="relative mt-20 flex laptop:w-8/12 tablet:w-10/12 flex-col items-center gap-5">
+      <div className="relative mt-20 flex laptop:w-8/12 tablet:w-9/12 flex-col items-center gap-5">
         {processSteps.map((step, index) => (
           <ProcessItem key={index} step={step} />
         ))}

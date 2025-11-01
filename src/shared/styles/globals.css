@@ -9,9 +9,9 @@
 /* Tailwindcss */
 @import "tailwindcss";
 
-@plugin '@tailwindcss/forms';
-@plugin '@tailwindcss/typography';
-@plugin 'tailwindcss-animate';
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+@plugin "tailwindcss-animate";
 
 @theme {
   --font-*: initial;
@@ -25,7 +25,7 @@
   --leading-tight: 1.1;
 
   --color-background: hsl(0 0 100%);
-  --color-foreground: hsl(0 0 4%);
+  --color-foreground: hsl(0 0 0%);
   --color-surface: hsl(0 0 98%);
   --color-border: hsl(0 0 94%);
   --color-input: hsl(0 0 94%);
@@ -54,7 +54,7 @@
   }
 
   body {
-    @apply text-sm tablet:text-base font-normal text-foreground bg-background leading-normal font-sans antialiased selection:bg-blue-500/10 selection:text-blue-950;
+    @apply text-base font-normal text-foreground bg-background leading-normal font-sans antialiased selection:bg-blue-500/10 selection:text-blue-950;
 
     font-variation-settings: normal;
     font-feature-settings:

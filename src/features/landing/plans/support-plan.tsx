@@ -5,7 +5,7 @@ export function SupportPlan(): React.ReactElement {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="hover:-translate-y-2 hover:-rotate-6 -rotate-3 col-span-4 tablet:col-span-2 flex cursor-pointer flex-col rounded-2xl bg-surface p-4 transition-all duration-300 hover:scale-95">
+        <div className="hover:-translate-y-2 hover:-rotate-6 tablet:-rotate-3 col-span-4 tablet:col-span-2 flex cursor-pointer flex-col rounded-2xl bg-surface p-4 transition-all duration-300 hover:scale-95">
           <div className="flex items-center">
             <h3 className="flex items-center gap-1 rounded-full bg-purple-100 px-3 py-1 pl-2 font-medium text-purple-500 text-sm">
               <i className="fi fi-sc-check-circle" />

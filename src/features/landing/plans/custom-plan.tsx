@@ -5,7 +5,7 @@ export function CustomPlan(): React.ReactElement {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="hover:-translate-y-2 col-span-4 flex rotate-2 cursor-pointer flex-col rounded-2xl bg-surface p-4 transition-all duration-300 hover:rotate-6 hover:scale-95">
+        <div className="hover:-translate-y-2 col-span-4 flex tablet:rotate-2 cursor-pointer flex-col rounded-2xl bg-surface p-4 transition-all duration-300 hover:rotate-6 hover:scale-95">
           <div className="flex items-center">
             <h3 className="flex items-center gap-1 rounded-full bg-green-100 px-3 py-1 pl-2 font-medium text-green-500 text-sm">
               <i className="fi fi-sc-check-circle" />

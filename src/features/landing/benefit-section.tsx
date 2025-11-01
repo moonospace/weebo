@@ -17,8 +17,8 @@ type ItemProps = {
 
 function Item({ label }: ItemProps): React.ReactElement {
   return (
-    <li className="flex items-center gap-3 text-foreground/60">
-      <i className="fi fi-sc-check-circle" />
+    <li className="group hover:-translate-y-1 flex cursor-pointer items-center gap-3 text-foreground/60 transition-all duration-300 hover:text-foreground">
+      <i className="fi fi-sc-check-circle text-foreground/40 text-sm transition-all duration-300 group-hover:scale-95 group-hover:text-foreground" />
       {label}
     </li>
   );
@@ -27,9 +27,7 @@ function Item({ label }: ItemProps): React.ReactElement {
 export function BenefitSection(): React.ReactElement {
   return (
     <section className="flex flex-col items-center py-28" id="mission">
-      <span className="text-foreground/40 text-sm">Mission</span>
-
-      <h2 className="mt-8 text-center font-medium text-5xl leading-tight tracking-tight">
+      <h2 className="mt-8 text-center font-medium tablet:text-5xl text-4xl leading-tight tracking-tight">
         Big deals
         <br />
         no bloated fees

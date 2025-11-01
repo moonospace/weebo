@@ -83,9 +83,7 @@ function FAQItem({
 export function FAQSesction(): React.ReactElement {
   return (
     <section className="flex flex-col items-center py-28" id="faq">
-      <span className="text-foreground/40 text-sm">FAQs</span>
-
-      <h2 className="mt-8 text-center font-medium text-5xl leading-tight tracking-tight">
+      <h2 className="mt-8 text-center font-medium tablet:text-5xl text-4xl leading-tight tracking-tight">
         Most asked
         <br />
         questions
@@ -93,7 +91,7 @@ export function FAQSesction(): React.ReactElement {
 
       <div className="mt-16 flex w-full items-center justify-center gap-5">
         <Accordion
-          className="flex laptop:w-8/12 tablet:w-10/12 w-full flex-col gap-3"
+          className="flex laptop:w-8/12 tablet:w-9/12 w-full flex-col gap-3"
           collapsible
           type="single"
         >

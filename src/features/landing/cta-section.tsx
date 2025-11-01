@@ -4,9 +4,7 @@ import type * as React from "react";
 export function CTASection(): React.ReactElement {
   return (
     <section className="flex flex-col items-center py-28" id="cta">
-      <span className="text-foreground/40 text-sm">Get Started.</span>
-
-      <h2 className="mt-8 text-center font-medium text-5xl leading-tight tracking-tight">
+      <h2 className="mt-8 text-center font-medium tablet:text-5xl text-4xl leading-tight tracking-tight">
         Let's move on
         <br />
         get a spot
@@ -35,7 +33,7 @@ export function CTASection(): React.ReactElement {
       <div className="mt-16 flex items-center gap-5">
         <Button
           asChild
-          className="hover:-translate-y-1 transition-all duration-300"
+          className="hover:-translate-y-1 transition-all duration-300 hover:scale-95"
           size={"lg"}
         >
           <a
@@ -44,7 +42,7 @@ export function CTASection(): React.ReactElement {
             target="_blank"
           >
             Get the spot now
-            <i className="fi fi-sr-location-arrow" />
+            <i className="fi fi-sr-check-circle" />
           </a>
         </Button>
       </div>

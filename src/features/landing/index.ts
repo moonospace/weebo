@@ -4,4 +4,3 @@ export * from "./faq-section";
 export * from "./hero-section";
 export * from "./plans/plans-section";
 export * from "./process-section";
-export * from "./services/service-section";

@@ -1,79 +1,74 @@
 import { Button } from "@shared/components";
 import { mergeClass } from "@shared/libs";
-import type * as React from "react";
 
-type WorkData = {
-  image: string;
-  label: string;
-};
-
-type WorkItemProps = {
-  item: WorkData;
+type GalleryItemProps = {
+  item: { image: string; label: string };
   className?: string;
 };
 
-function WorkItem({ item, className }: WorkItemProps) {
+function GalleryItem({ item, className }: GalleryItemProps) {
   return (
-    <img
-      alt={item.label}
+    <div
       className={mergeClass(
-        "hover:-translate-y-5 absolute inset-0 h-full w-full cursor-pointer overflow-hidden rounded-3xl border-2 border-border border-dashed object-cover transition-all duration-300 hover:scale-105",
+        "absolute h-full w-full cursor-pointer overflow-hidden rounded-3xl border border-border border-dashed bg-background p-1 transition-all duration-500 hover:z-10 hover:scale-105",
         className
       )}
-      src={item.image}
-    />
+    >
+      <img
+        alt={item.label}
+        className="h-full w-full rounded-2xl object-cover"
+        src={item.image}
+      />
+    </div>
   );
 }
 
-function WorkStack(): React.ReactElement {
+function Gallery() {
   return (
-    <div className="relative mt-20 h-[360px] w-10/12">
-      <WorkItem
-        className="-rotate-3"
+    <div className="group relative mt-28 flex h-[240px] tablet:h-[360px] laptop:w-9/12 tablet:w-10/12 w-11/12 items-center justify-center">
+      <GalleryItem
+        className="-rotate-3 group-hover:-translate-y-1/12"
         item={{
-          image:
-            "https://cdn.hashnode.com/res/hashnode/image/upload/v1761128452657/3d41ccfd-3c81-43e4-9484-7c04a7abec57.png",
-          label: "Automatic nation",
+          image: "/images/gallery-2.png",
+          label: "Guna transport",
         }}
       />
-      <WorkItem
-        className="translate-y-4 rotate-3"
+      <GalleryItem
+        className="rotate-6 group-hover:translate-y-2/12 group-hover:rotate-3"
         item={{
-          image:
-            "https://cdn.hashnode.com/res/hashnode/image/upload/v1761128323170/49739931-b892-4ac1-9b0c-654ae56ea1be.png",
-          label: "Guna transport",
+          image: "/images/gallery-1.png",
+          label: "One thing theme",
         }}
       />
     </div>
   );
 }
 
-export function HeroSection(): React.ReactElement {
+export function HeroSection() {
   return (
     <section
-      className="flex flex-col items-center py-28 tablet:pt-48"
+      className="flex flex-col items-center py-28 pt-16 tablet:pt-48"
       id="hero"
     >
-      <span className="flex gap-2 text-foreground/40 text-sm">
-        <i className="fi fi-sr-heart text-pink-500" /> Favored by more than 10+
-        startups
+      <span className="flex items-center gap-2 rounded-2xl bg-green-100 px-3 py-1.5 text-green-600 text-sm">
+        <i className="fi fi-sr-heart" /> Favored by more than 10+ startups
       </span>
 
-      <h2 className="mt-8 text-center font-medium text-5xl leading-tight tracking-tight">
-        Trusted web design
+      <h2 className="mt-8 text-center font-medium tablet:text-5xl text-4xl leading-tight tracking-tight">
+        Result based web
         <br />
-        partner on the go
+        design partner
       </h2>
 
       <p className="mx-auto mt-12 tablet:w-7/12 w-full text-pretty text-center text-foreground/60 leading-7">
         Helping startups, agencies, and enterprises build their on demand
-        websites to win customers
+        websites to win the customers
       </p>
 
       <div className="mt-16 flex tablet:flex-row flex-col items-center gap-5">
         <Button
           asChild
-          className="hover:-translate-y-1 transition-all duration-300"
+          className="hover:-translate-y-1 transition-all duration-300 hover:scale-95"
           size={"lg"}
           variant={"primary"}
         >
@@ -83,12 +78,12 @@ export function HeroSection(): React.ReactElement {
             target="_blank"
           >
             Book a call
-            <i className="fi fi-sr-location-arrow" />
+            <i className="fi fi-sc-check-circle" />
           </a>
         </Button>
       </div>
 
-      <WorkStack />
+      <Gallery />
     </section>
   );
 }
