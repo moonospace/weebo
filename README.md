@@ -16,7 +16,7 @@ This project is built to support the product and allow the user to know more abo
 
 Since building this project here are list about stack, site, tech and any library in this project
 
-- [Next.js](https://nextjs.org)
+- [Tanstack Start](https://tanstack.com/start)
 - [Tailwincss](https://tailwindcss.com)
 - [Lenis Scroll Smoother](https://lenis.studiofreight.com)
 - [Vercel](https://vercel.com)
