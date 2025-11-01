@@ -5,7 +5,6 @@ import {
   HeroSection,
   PlansSection,
   ProcessSection,
-  ServiceSection,
 } from "@features/landing";
 import { generateMetaTags } from "@shared/libs";
 import { createFileRoute } from "@tanstack/react-router";
@@ -27,7 +26,6 @@ function PageComponent() {
       <HeroSection />
       <BenefitSection />
       <ProcessSection />
-      <ServiceSection />
       <PlansSection />
       <FAQSesction />
       <CTASection />
