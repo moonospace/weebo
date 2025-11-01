@@ -1,17 +1,13 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-  "extends": ["ultracite"],
+  "extends": ["ultracite/core", "ultracite/react"],
   "linter": {
     "rules": {
-      "nursery": {
-        "useImageSize": "off"
-      },
       "suspicious": {
         "noArrayIndexKey": "off",
         "noExplicitAny": "off"
       },
       "performance": {
-        "noImgElement": "off",
         "noBarrelFile": "off",
         "noNamespaceImport": "off",
         "useTopLevelRegex": "off"
@@ -19,18 +15,10 @@
       "style": {
         "noExportedImports": "off",
         "noMagicNumbers": "off"
+      },
+      "correctness": {
+        "useImageSize": "off"
       }
-    }
-  },
-  "css": {
-    "assist": {
-      "enabled": false
-    },
-    "linter": {
-      "enabled": false
-    },
-    "formatter": {
-      "enabled": false
     }
   }
 }
