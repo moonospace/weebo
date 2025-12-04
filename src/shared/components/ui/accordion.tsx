@@ -1,6 +1,6 @@
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { mergeClass } from "@shared/libs";
 import type * as React from "react";
+import { cx } from "tailwind-variants/lite";
 
 const Accordion = AccordionPrimitive.Root;
 
@@ -14,7 +14,7 @@ const AccordionItem = ({
   > | null>;
 }) => (
   <AccordionPrimitive.Item
-    className={mergeClass("rounded-2xl bg-surface p-4", className)}
+    className={cx("rounded-2xl bg-surface p-4", className)}
     ref={ref}
     {...props}
   />
@@ -33,7 +33,7 @@ const AccordionTrigger = ({
 }) => (
   <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
-      className={mergeClass(
+      className={cx(
         "flex flex-1 cursor-pointer items-center justify-between text-left transition-all duration-300 [&[data-state=open]>i]:rotate-180",
         className
       )}
@@ -58,7 +58,7 @@ const AccordionContent = ({
   > | null>;
 }) => (
   <AccordionPrimitive.Content
-    className={mergeClass(
+    className={cx(
       "overflow-hidden py-4 text-foreground/60 leading-relaxed transition-all duration-700",
       className
     )}

@@ -1,6 +1,6 @@
 import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area";
-import { mergeClass } from "@shared/libs";
 import type * as React from "react";
+import { cx } from "tailwind-variants/lite";
 
 const ScrollBar = ({
   ref,
@@ -15,7 +15,7 @@ const ScrollBar = ({
   > | null>;
 }) => (
   <ScrollAreaPrimitive.ScrollAreaScrollbar
-    className={mergeClass(
+    className={cx(
       "flex touch-none select-none transition-colors",
       orientation === "vertical" &&
         "h-full w-2.5 border-l border-l-transparent p-[1px]",
@@ -43,7 +43,7 @@ const ScrollArea = ({
   > | null>;
 }) => (
   <ScrollAreaPrimitive.Root
-    className={mergeClass("relative overflow-hidden", className)}
+    className={cx("relative overflow-hidden", className)}
     ref={ref}
     {...props}
   >
