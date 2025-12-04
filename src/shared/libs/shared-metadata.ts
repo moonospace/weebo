@@ -39,9 +39,8 @@ export function generateMetaTags({
       content: "uJ4nZwWkaO0JcSSuUdkkxjTiWLPI61o95zrtFuXPeQM",
     },
     { name: "category", content: "Websites" },
-    { name: "generator", content: "React Router" },
+    { name: "generator", content: "Tanstack start" },
     { name: "pinterest-rich-pin", content: "true" },
-
     {
       name: "og:title",
       content: title,
@@ -54,11 +53,10 @@ export function generateMetaTags({
       name: "og:image",
       content:
         image ??
-        "https://cdn.hashnode.com/res/hashnode/image/upload/v1729709107977/6dabcb40-d18e-48cf-a86b-7b423efb6605.png",
+        "https://cdn.hashnode.com/res/hashnode/image/upload/v1764831318505/81289659-934b-4765-8ed4-970c1ae19db1.png",
     },
     { name: "og:locale", content: "en_US" },
     { name: "og:type", content: "website" },
-
     {
       name: "twitter:title",
       content: title,
@@ -74,7 +72,7 @@ export function generateMetaTags({
       name: "twitter:image",
       content:
         image ??
-        "https://cdn.hashnode.com/res/hashnode/image/upload/v1729709107977/6dabcb40-d18e-48cf-a86b-7b423efb6605.png",
+        "https://cdn.hashnode.com/res/hashnode/image/upload/v1764831318505/81289659-934b-4765-8ed4-970c1ae19db1.png",
     },
   ];
 }
