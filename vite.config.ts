@@ -15,11 +15,9 @@ export default defineConfig({
     tanstackStart({
       srcDirectory: "src/app",
       prerender: {
-        enabled: true,
-        concurrency: 7,
+        enabled: false,
         autoSubfolderIndex: true,
         crawlLinks: true,
-        retryCount: 3,
       },
       sitemap: {
         enabled: true,
