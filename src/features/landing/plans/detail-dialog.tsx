@@ -1,9 +1,9 @@
+import { Button } from "@shared/components/ui/button";
 import {
-  Button,
   Dialog,
   DialogContent,
   DialogTrigger,
-} from "@shared/components";
+} from "@shared/components/ui/dialog";
 import type * as React from "react";
 
 export function DetailDialog(): React.ReactElement {

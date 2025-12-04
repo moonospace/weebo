@@ -6,13 +6,13 @@ import {
   PlansSection,
   ProcessSection,
 } from "@features/landing";
-import { generateMetaTags } from "@shared/libs";
+import { generateMetaTags } from "@shared/libs/shared-metadata";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: generateMetaTags({
-      title: "Lead web design & development partner | Weebo",
+      title: "Lead Web Design & Development Partner | Weebo",
       description:
         "Unlimited web design partner for growing startups, agencies & enterprises",
     }),

@@ -1,4 +1,8 @@
-import { Dialog, DialogContent, DialogTrigger } from "@shared/components";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from "@shared/components/ui/dialog";
 import type * as React from "react";
 
 export function CustomPlan(): React.ReactElement {

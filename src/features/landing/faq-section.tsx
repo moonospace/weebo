@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@shared/components";
+} from "@shared/components/ui/accordion";
 import type * as React from "react";
 
 type FAQ = {

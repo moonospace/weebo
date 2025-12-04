@@ -1,4 +1,4 @@
-import { Button } from "@shared/components";
+import { Button } from "@shared/components/ui/button";
 import type * as React from "react";
 
 export function CTASection(): React.ReactElement {
